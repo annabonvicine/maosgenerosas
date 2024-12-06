@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mãos Generosas</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="./imagens/image_ong.png" alt="Logo da Mãos Generosas">
+        <h1>Mãos Generosas</h1>
+      </div>
+      <nav>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <ul class="menu" id="menu-links">
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#ajudar">Como Ajudar</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Transformando vidas com solidariedade</h1>
+      <p>A Mãos Generosas é uma ONG dedicada a levar esperança e apoio a comunidades em situação de vulnerabilidade social. Através de campanhas e ações solidárias, buscamos ajudar aqueles que enfrentam a falta de alimentos, com um foco em promover a dignidade e a qualidade de vida. Nosso trabalho é realizado com a colaboração de voluntários e doações de pessoas generosas, que acreditam que juntos podemos fazer a diferença na vida de muitas famílias.</p>
+      <a href="#ajudar" class="button">Saiba como ajudar</a>
+    </section>
+
+    <section id="info" class="info-section">
+      <div class="card">
+        <img src="./imagens/Design sem nome.png" alt="Sobre Nós">
+        <h3>Sobre Nós</h3>
+        <p>Saiba quem somos e como atuamos para fazer a diferença.</p>
+        <a href="#sobre" class="button">Saiba mais</a>
+      </div>
+      <div class="card">
+        <img src="./imagens/heart1.jpg" alt="Como Ajudar">
+        <h3>Como Ajudar</h3>
+        <p>Descubra maneiras de contribuir e mudar vidas conosco.</p>
+        <a href="#ajudar" class="button">Saiba mais</a>
+      </div>
+      <div class="card">
+        <img src="contato.jpg" alt="Contato">
+        <h3>Contato</h3>
+        <p>Entre em contato conosco para tirar dúvidas ou colaborar.</p>
+        <a href="#contato" class="button">Saiba mais</a>
+      </div>
+    </section>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuLinks = document.getElementById("menu-links");
+
+    menuToggle.addEventListener("click", () => {
+      menuLinks.classList.toggle("show");
+    });
+
+   
+    window.addEventListener('click', (event) => {
+      if (!menuLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+        menuLinks.classList.remove("show");
+      }
+    });
+</script>
+
+  <footer>
+    <p>&copy; 2024 Mãos Generosas. Todos os direitos reservados.</p>
+  </footer>
+
+  
+</body>
+</html>
